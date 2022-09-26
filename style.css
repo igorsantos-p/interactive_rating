@@ -1,0 +1,134 @@
+:root {
+  --bt-color: hsl(25, 97%, 53%);
+  --rating-color: #272e36;
+  --select-bt-color: hsl(217, 12%, 63%);
+  --text-color: hsl(216, 12%, 54%);
+  --container-color: hsl(213, 19%, 18%);
+  --bg-color: rgb(18, 20, 23);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background: var(--bg-color);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-items: center;
+  font-family: "Overpass", sans-serif;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 375px;
+  background: radial-gradient(circle at top, #252d37ea, #252d373a);
+  box-sizing: border-box;
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+  border-radius: 20px;
+}
+
+.container.container2 {
+  justify-items: center;
+  text-align: center;
+}
+
+.container.hide {
+  display: none;
+}
+
+.star {
+  display: block;
+  background: var(--rating-color);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.075rem;
+}
+
+.text {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: hsl(216, 12%, 54%);
+}
+
+.rating-set {
+  color: var(--bt-color);
+  font-size: 0.875rem;
+  letter-spacing: 0.075rem;
+  font-weight: 400;
+  background: var(--rating-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.rating {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-values {
+  background-color: var(--rating-color);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.rating-values:hover {
+  background-color: var(--bt-color);
+}
+
+
+.container li button:focus {
+  background: var(--select-bt-color);
+}
+
+.submit {
+  text-transform: uppercase;
+  background: var(--bt-color);
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit:hover {
+  background: white;
+  color: var(--bt-color);
+}
+
+.footer {
+  color: var(--text-color);
+  padding: 40px;
+  place-self: center;
+}
+
+.footer a {
+  color: inherit;
+}
