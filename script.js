@@ -5,15 +5,16 @@ let ratingSeted = document.getElementsByName("rating-value");
 let ratingDisplay = document.querySelector(".rating-set");
 
 ratingSeted.forEach((element) => {
-  element.addEventListener("click", () => {
-    this.value = element.getAttribute("value");
-    if(value){
-      Submit()
+  element.addEventListener("click", (event) => {
+    if (event.target.checked) {
+      let value = element.getAttribute("value");
+      console.log(value);
+      Submit(value)
     }
   });
 });
 
-function Submit() {
+function Submit(value) {
   submit.addEventListener("click", () => {
     thankYouPage.classList.toggle("hide");
     homePage.classList.toggle("hide");
