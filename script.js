@@ -8,7 +8,6 @@ ratingSeted.forEach((element) => {
   element.addEventListener("click", (event) => {
     if (event.target.checked) {
       let value = element.getAttribute("value");
-      console.log(value);
       Submit(value)
     }
   });
