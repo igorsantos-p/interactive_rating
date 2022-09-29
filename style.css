@@ -65,43 +65,36 @@ ul {
   color: hsl(216, 12%, 54%);
 }
 
-.rating-set {
-  color: var(--bt-color);
-  font-size: 0.875rem;
-  letter-spacing: 0.075rem;
-  font-weight: 400;
-  background: var(--rating-color);
-  padding: 10px 20px;
-  border-radius: 20px;
-}
-
 .rating {
   list-style: none;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-.rating-values {
-  background-color: var(--rating-color);
-  border: none;
+.rating label {
   width: 45px;
   height: 45px;
+  background: var(--rating-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   cursor: pointer;
-  transition: 0.1s;
+  color: white;
 }
 
-.rating-values:hover {
-  background-color: var(--bt-color);
+.rating label:hover {
+  background: var(--bt-color);
 }
 
 
-.container li button:focus {
+.rating input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.rating input:checked + label {
   background: var(--select-bt-color);
 }
 
@@ -121,6 +114,16 @@ ul {
 .submit:hover {
   background: white;
   color: var(--bt-color);
+}
+
+.rating-set {
+  color: var(--bt-color);
+  font-size: 0.875rem;
+  letter-spacing: 0.075rem;
+  font-weight: 400;
+  background: var(--rating-color);
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .footer {
